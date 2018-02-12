@@ -4,7 +4,7 @@ from collections import Counter
 import operator
 import re
 
-REGEX = '\d{2}\.\d\.\d{3}\.\d{3}\s[[]\d{2}[/][A-Z][a-z]{2}[/]\d{4}[:]\d{2}[:]\d{2}[:]\d{2}\s[+]\d{4}[]]\s["][A-Z]{3}\s(https?://(?P<url>[a-z./?=&]+))\s[A-Z]{4}[/]\d\.\d["]\s\d{3}\s\d{4}'
+REGEX = '\d{2}\.\d\.\d{3}\.\d{3}\s[[]\d{2}[/][A-Z][a-z]{2}[/]\d{4}[:]\d{2}[:]\d{2}[:]\d{2}\s[+]\d{4}[]]\s["][A-Z]{3}\s(?P<url>https?://[a-z./?=&]+)\s[A-Z]{4}[/]\d\.\d["]\s\d{3}\s\d{4}'
 
 def main():
     logs_list = []
