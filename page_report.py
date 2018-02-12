@@ -3,9 +3,12 @@ from urllib.parse import urlparse
 from collections import Counter
 import operator
 
+logs_list = []
+
 # open file using context manager
-with open(sys.argv[1], 'r') as file:
-    logs_list = file.readlines()
+with open(sys.argv[1], 'r') as file:    
+    for line in file:
+        logs_list.append(line)
 
 urls_list = []
 
