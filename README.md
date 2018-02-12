@@ -4,4 +4,4 @@
   
 
 **Task 2** --> page_report.py <br/>
-	run: `python page_report.py today.log > raport.csv`
+	run using: `python page_report.py today.log > raport.csv`
