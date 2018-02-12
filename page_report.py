@@ -31,9 +31,9 @@ def main():
         print("\"" + k + "\"," + str(v))
 
 def parse_url(log):
+    
+    # retrieve url using regex group name
     match = re.search(REGEX, log)
-
-    # get url using regex group name
     whole_url = match.group('url')
 
     # clean up url
