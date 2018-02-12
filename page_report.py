@@ -8,7 +8,6 @@ REGEX = '\d{2}\.\d\.\d{3}\.\d{3}\s[[]\d{2}[/][A-Z][a-z]{2}[/]\d{4}[:]\d{2}[:]\d{
 
 def main():
     logs_list = []
-    urls_list = []
 
     # read file using context manager
     with open(sys.argv[1], 'r') as file:
@@ -19,9 +18,7 @@ def main():
                 sys.stderr.write("Invalid log lines: " + str(num) + '\n')
 
     # parse url from log string
-    for log in logs_list:
-        url = parse_url(log)
-        urls_list.append(url)
+    urls_list = [parse_url(log) for log in logs_list]        
 
     # count the number of occurrences of each url in urls_list
     num_of_occur = Counter(urls_list)
