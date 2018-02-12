@@ -28,7 +28,7 @@ def main():
 
     # print sorted output
     for k, v in sorted(num_of_occur.items(), key=operator.itemgetter(1), reverse=True):
-        print("\"" + k + "\"," + str(v))
+        print("\"{}\",{}".format(k, v))
 
 def parse_url(log):
     
